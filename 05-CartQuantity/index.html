@@ -6,16 +6,36 @@
     <title>Cart Quantity</title>
     <link rel="stylesheet" href="Styles.css">
     <script src="/SuperSimpleDev/index.js"></script>
+
 </head>
 <body style="background-color: rgb(56, 55, 55);">
     <div class="header">Cart Count</div>
+
     <div class="buttons">
-        <button onclick="console.log('cart Quantity 0')">Show Quantity</button>
-        <button>Add to Cart</button>
-        <button>+2</button>
-        <button>+3</button>
-        <button>Reset Cart</button>
+
+        <button onclick="console.log(`Cart Quantity: ${CartQuantity}`)">Show Quantity</button>
+        <button onclick="
+            CartQuantity = CartQuantity + 1;
+            console.log(`Cart Quantity: ${CartQuantity}`);
+            ">Add to Cart</button>
+        <button onclick="
+            CartQuantity = CartQuantity + 2;
+            console.log(`Cart Quantity: ${CartQuantity}`);
+        ">+2</button>
+        <button onclick="
+            CartQuantity = CartQuantity + 3;
+            console.log(`Cart Quantity: ${CartQuantity}`);
+        ">+3</button>
+        <button onclick="
+            CartQuantity = 0;
+            console.log('Cart was reset');
+            console.log(`Cart Quantity: ${CartQuantity}`);
+        ">Reset Cart</button>
+
     </div>
+    <script>
+        let CartQuantity = 0;
+    </script>
 
 </body>
 </html>
