@@ -1,0 +1,19 @@
+body{
+    background-color: #181C14;
+}
+
+h1 {
+    text-align: center;
+    color: #ECDFCC;
+
+}
+
+.buttons {
+    text-align: center;
+}
+.buttons button{
+    border-radius: 20%;
+    min-height: 50px;
+    min-width: 100px;
+    background-color: #ECDFCC;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp</title>
+</head>
+<body>
+    <script>
+        
+        function accesscode(){
+            let x = prompt('enter access code')
+            if (x==123){
+                alert('you may enter');
+                return true;
+            }
+            else {
+                alert('DO NOT ENTER');
+                return false;
+                
+            }
+
+        }
+        function checkAge(age) {
+            if (age >= 18) {
+                return true;
+            } 
+            else {
+                accesscode();
+            }
+        }
+
+        let age = prompt('How old are you?', 18);
+
+        if ( checkAge(age) ) {
+            alert( 'Access granted' );
+            }
+        else {
+            alert( 'Access denied' );
+            }  
+    </script>
+</body>
+</html>
