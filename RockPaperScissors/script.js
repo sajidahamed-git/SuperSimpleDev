@@ -1,3 +1,4 @@
+
 function playGame(userChoice) {
   let computerChoice = getComputerChoice();
 
@@ -59,6 +60,19 @@ function userScissors(computerChoice, userChoice) {
 }
 
 function alertResult(computerChoice, userChoice, result) {
+  let score = JSON.parse(localStorage.getItem('message'))
+
+    if (!score) {
+      score = {
+        wins: 0,
+        losses: 0,
+        draws: 0,
+      };
+      
+    }
+  
+  
+
   if (result == "win") {
     score.wins = score.wins + 1;
   }
@@ -68,15 +82,33 @@ function alertResult(computerChoice, userChoice, result) {
   if (result == "draw") {
     score.draws = score.draws + 1;
   }
+
+
   alert(
     `You chose ${userChoice} and Computer chose ${computerChoice} so game ${result} 
 wins: ${score.wins}, Losses :${score.losses}, Draws: ${score.draws}`
   );
+  
+  localStorage.setItem('message',JSON.stringify(score));
+  console.log(typeof score);  
+  
   console.log(score);
 }
 
-const score = {
-  wins: 0,
-  losses: 0,
-  draws: 0,
-};
+function resetButton(){
+  localStorage.removeItem('message')
+  console.log('score deleted');
+}
+
+
+//  if (score == null) {
+//   console.log('nell');
+//   let score = {
+//     wins: 0,
+//     losses: 0,
+//     draws: 0,
+//   }
+//   else {
+//     score = JSON.parse(localStorage.getItem('message'))
+//   }
+// }
