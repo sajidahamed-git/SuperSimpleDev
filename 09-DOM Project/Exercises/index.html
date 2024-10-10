@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Exercises</title>
+</head>
+<body>
+    <button>9a</button>
+    <button class="js" onclick="textChange()" >9b </button>
+    <br><br>
+    <button  onclick="document.querySelector('.headsortails').innerHTML = `you chose: Heads`">Heads</button>
+    <button  onclick="document.querySelector('.headsortails').innerHTML = `you chose: Tails`">Tails</button>
+    <p class="headsortails"></p>
+
+    <br>
+    <br>
+    <input type="text" name="name" id="name" placeholder="Name" class="js-name" 
+        onkeypress="
+                    if (event.key === 'Enter') {
+                    document.querySelector('.name-display').innerHTML = `Your Name is ${document.querySelector('.js-name').value}`
+                    }
+                ">
+    <button onclick="
+        document.querySelector('.name-display').innerHTML = `Your Name is ${document.querySelector('.js-name').value}`"
+
+    >Submit</button>
+    <p class="name-display"></p>
+
+
+
+</body>
+
+<script>
+    console.log(document.querySelector('.js-name').innervalue);
+    console.log(document.querySelector('button'))
+    function textChange() {
+        document.querySelector('.js').innerHTML = '9b done'
+        
+    }
+
+</script>
+</html>

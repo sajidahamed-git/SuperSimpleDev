@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Dom Project</title>
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button class="js-subscribe-button"
+            onclick="subscribe()"
+    >Subscribe</button>
+
+    <p>Rock Paper Scissors</p>
+    <p>file:///D:/GithubRepos/SuperSimpleDev/09-DOM Project/09-RockPaperScissors/index.html</p>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = + $10 Shipping</p>
+    <p>Orders above $40 = FREE shipping</p>
+
+    <input  placeholder="  cost of order" class="js-cost-value"
+        onkeydown="keypressHandler(event.key)">
+    <button class="js-calculate-button" 
+        onclick="costCalculate()"
+    >calculate</button>
+
+    <p class="js-display-cost"></p>
+
+    <script>
+        
+        function keypressHandler(key) {
+                if (key === "Enter") {
+                    costCalculate()
+                }
+        }
+        function costCalculate()
+        {   
+            console.log('fdfd');
+            let cost = Number(document.querySelector('.js-cost-value').value)
+            if (cost < 40) {
+                cost = cost + 10
+            }
+            console.log(cost);
+            document.querySelector('.js-display-cost').innerHTML = `Your Tota cost is $${cost}`  
+        }
+        function subscribe(){
+            const buttonElement = document.querySelector('.js-subscribe-button')
+            if (buttonElement.innerText === 'Subscribe') 
+            {
+                buttonElement.innerHTML = 'Subscribed'
+            }
+            else {
+                buttonElement.innerHTML = 'Subscribe'
+
+            }
+            }
+    </script>
+    
+</body>
+</html>

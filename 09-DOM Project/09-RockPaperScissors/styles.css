@@ -1,0 +1,25 @@
+body{
+    background-color: #181C14;
+}
+
+h1 {
+    text-align: center;
+    color: #ECDFCC;
+
+}
+
+.buttons {
+    text-align: center;
+}
+.buttons button{
+    border-radius: 10%;
+    min-height: 50px;
+    min-width: 100px;
+    background-color: #ECDFCC;
+}
+
+.js{
+    color: white;
+    text-align: center;
+    font-size: larger;
+}
